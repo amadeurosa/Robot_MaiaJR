@@ -3,22 +3,22 @@
 
 
 //Motor1
-#define velm1 3
-#define m1a 2
-#define m1b 4
+#define velm1 6
+#define m1a 13
+#define m1b 12
 #define tmp 5000
 
 //Motor2
-#define velm2 11
-#define m2a 12
-#define m2b 13
+#define velm2 5
+#define m2a 4
+#define m2b 3
 
 //Leitura do Estado do robô
 bool movingForward = true;
 
 //Ultrassonic
-#define sonarTrigger 7
-#define sonarEcho 8
+#define sonarTrigger 9
+#define sonarEcho 10
 
 int distance = 0;
 int time = 0;
@@ -106,7 +106,7 @@ void loop()
     	
   // Estado do robô e tomada de decisão
     if (movingForward) {
-        if (distance <= 30) {
+        if (distance <= 40) {
             stop();
             movingForward = false;
             delay(1000); 
